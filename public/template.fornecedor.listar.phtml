@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>email</td>
+    </tr>
+    <?php foreach($listaFornecedor as $fornecedor): ?>
+        <tr>
+            <td><?=$fornecedor['id']?></td>
+            <td><?=$fornecedor['nome']?></td>
+            <td><?=$fornecedor['email']?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>

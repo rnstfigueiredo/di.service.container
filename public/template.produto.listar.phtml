@@ -1,0 +1,16 @@
+<table style="color: black; border-color: red; border-style: dotted; width: 30%">
+    <tr>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Unidade</td>
+        <td>Fornecedor</td>
+    </tr>
+    <?php foreach($listaProduto as $produto): ?>
+        <tr>
+            <td><?=$produto['id']?></td>
+            <td><?=$produto['nome']?></td>
+            <td><?=$produto['unidade']?></td>
+            <td><?=$produto['fornecedor']?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>

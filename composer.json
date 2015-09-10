@@ -1,0 +1,32 @@
+{
+    "name": "DI and Conteiner",
+    "description": "Curso code.education - DI and Service Container",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "code.education",
+        "DI",
+        "Service Container"
+    ],
+    "authors": [
+        {
+            "name": "rnst Figueiredo",
+            "email": "leoni@mfigueiredo.eti.br",
+            "homepage": "http://www.mfigueiredo.eti.br",
+            "role": "Estudante"
+        },
+        {
+            "name": "Code.Education",
+            "email": "atendimento@schoolofnet.com",
+            "homepage": "http://code.education",
+            "role": "Tutoria - Mentoria"
+        }
+    ],    
+    "autoload" : {
+        "psr-0": {
+             "RNST\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5"
+    }
+}

@@ -1,11 +1,13 @@
 <?php
 
-class Fornecedor {
-    
+namespace rnst;
+
+class Produto {
     private $db;
     private $id;
+    private $fk_id_fornecedor;
     private $nome;
-    private $email;
+    private $unidade;
 
 
     public function __construct(ConexaoInterface $conexao) {
@@ -13,23 +15,17 @@ class Fornecedor {
         $this->db = $conexao->conectar();
     }
     
-    /*
-    Create	INSERT  inserir
-    Read (Retrieve)	SELECT listar
-    Update	UPDATE atualizar
-    Delete (Destroy) DELETE apagar
-    */
+   
     
     public function inserir()
     {
         
     }
     
-    public function listar($id = NULL)
+    public function listar()
     {
-        $where = "";
-        if($id != null){ $where = " WHERE `id` ={$id}";}
-        $qry = "SELECT * FROM `fornecedores`".$where;
+        
+        $qry = "SELECT * FROM `produtos`";
         $stmt = $this->db->prepare($qry);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -44,6 +40,4 @@ class Fornecedor {
     {
         
     }
-    
-    
 }

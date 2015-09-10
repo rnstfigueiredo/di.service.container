@@ -1,6 +1,7 @@
 <?php
 
-require_once 'ConexaoInterface.php';
+namespace rnst;
+
 
 
 class Conexao implements ConexaoInterface 

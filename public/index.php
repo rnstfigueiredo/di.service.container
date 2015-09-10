@@ -3,7 +3,13 @@
 Curso DI_Service_Container
 */
 
-require_once 'Conexao.php';
+require_once '../vendor/autoload.php';
+
+$conteiner = new Pimple;
+
+
+
+/*require_once 'Conexao.php';
 require_once 'Produto.php';
 require_once 'Fornecedor.php';
 
@@ -26,6 +32,4 @@ foreach ($listaProduto as $key => $produto){
         require_once 'template.produto.listar.phtml';
 //require_once 'template.fornecedor.listar.phtml';
 
-
-
- ?>
+*/

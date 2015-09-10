@@ -23,10 +23,11 @@
     ],    
     "autoload" : {
         "psr-0": {
-             "RNST\\": "src/"
+             "rnst\\": "src/"
         }
     },
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "pimple/pimple": "~3.0"
     }
 }

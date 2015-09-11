@@ -1,13 +1,34 @@
 <?php
-/*
-Curso DI_Service_Container
-*/
+/* Curso DI_Service_Container */
 
 require_once '../vendor/autoload.php';
+require_once 'config.php';
+require_once 'services.php';
 
-$conteiner = new Pimple;
+$produto = $container['produto'];
+$fornecedor = $container['fornecedor'];
+
+//print_r($fornecedor);
+//echo '<br />';
+
+//print_r($produto);
+//echo '<br />';
+
+$listaProduto = $produto->listar();
+
+//var_dump($listaProduto);
+//die;
+
+foreach ($listaProduto as $key => $produto){
+   
+    $listaFornecedor = $fornecedor->listar($produto['fk_id_fornecedor']);
+    $listaProduto[$key]['fornecedor'] = $listaFornecedor[0]['nome'];
+    
+}
 
 
+require_once 'template.produto.listar.phtml';
+//$fornecedor = 
 
 /*require_once 'Conexao.php';
 require_once 'Produto.php';

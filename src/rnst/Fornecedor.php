@@ -22,8 +22,13 @@ class Fornecedor {
     Delete (Destroy) DELETE apagar
     */
     
-    public function inserir()
+    public function inserir($fornecedor)
     {
+      
+      $qry = "INSERT INTO `fornecedores` (`nome`, `email`) VALUES ('{$fornecedor['nome']}', '{$fornecedor['email']}')";
+      $stmt = $this->db->prepare($qry);
+      $stmt->execute();
+        
         
     }
     
@@ -34,17 +39,23 @@ class Fornecedor {
         $qry = "SELECT * FROM `fornecedores`".$where;
         $stmt = $this->db->prepare($qry);
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
     
-    public function atualizar()
+    public function atualizar($fornecedor)
     {
         
+        $qry = "UPDATE `code.educacion_diservice`.`fornecedores` SET `nome` = '{$fornecedor['nome']}', `email` = '{$fornecedor['email']}' WHERE `fornecedores`.`id` ={$fornecedor['id']};";
+        $stmt = $this->db->prepare($qry);
+        $stmt->execute();
     }
     
-    public function apagar()
+    public function apagar($id)
     {
-        
+        /**/
+        $qry = "DELETE FROM `code.educacion_diservice`.`fornecedores` WHERE `fornecedores`.`id` = ".$id;
+        $stmt = $this->db->prepare($qry);
+        $stmt->execute();
     }
     
     

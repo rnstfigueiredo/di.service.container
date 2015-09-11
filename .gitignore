@@ -8,8 +8,6 @@ nbproject
 .project
 .settings
 composer.lock
-vendor
-composer.phar
 local.php
 *.local.php
 myNotes

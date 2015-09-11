@@ -26,8 +26,10 @@
              "rnst\\": "src/"
         }
     },
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.5",
-        "pimple/pimple": "~3.0"
+        "pimple/pimple": "1.1"
+
     }
 }

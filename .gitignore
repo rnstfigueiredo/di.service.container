@@ -11,3 +11,4 @@ composer.lock
 local.php
 *.local.php
 myNotes
+vendor
